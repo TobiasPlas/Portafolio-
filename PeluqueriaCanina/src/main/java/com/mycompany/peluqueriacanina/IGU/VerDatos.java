@@ -1,3 +1,4 @@
+
 package com.mycompany.peluqueriacanina.IGU;
 
 import com.mycompany.peluqueriacanina.Logica.Controladora;
