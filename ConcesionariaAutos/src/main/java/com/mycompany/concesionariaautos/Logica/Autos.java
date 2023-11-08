@@ -18,11 +18,12 @@ public class Autos implements Serializable {
     private String cantPuerta;
     private String estado;
     private String km;
+    private String precio;
     
     public Autos() {
     }
 
-    public Autos(int id, String modelo, String marca, String color, String patente, String cantPuerta, String estado, String km) {
+    public Autos(int id, String modelo, String marca, String color, String patente, String cantPuerta, String estado, String km, String precio) {
         this.id = id;
         this.modelo = modelo;
         this.marca = marca;
@@ -31,10 +32,18 @@ public class Autos implements Serializable {
         this.cantPuerta = cantPuerta;
         this.estado = estado;
         this.km = km;
+        this.precio = precio;
+    }
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
     }
 
   
-
     public int getId() {
         return id;
     }

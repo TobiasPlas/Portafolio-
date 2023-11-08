@@ -36,6 +36,11 @@ public class Principal extends javax.swing.JFrame {
 
         btnVerDatos.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         btnVerDatos.setText("Ver catalogo");
+        btnVerDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerDatosActionPerformed(evt);
+            }
+        });
 
         btnSalir.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         btnSalir.setText("Salir");
@@ -124,6 +129,12 @@ public class Principal extends javax.swing.JFrame {
    dat.setLocationRelativeTo(null);
         
     }//GEN-LAST:event_btnCargarActionPerformed
+
+    private void btnVerDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDatosActionPerformed
+       Catalogo verdatos = new Catalogo();
+       verdatos.setVisible(true);
+       verdatos.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnVerDatosActionPerformed
 
     
     

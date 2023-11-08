@@ -31,7 +31,6 @@ public class AutosJpaController implements Serializable {
         emf = Persistence.createEntityManagerFactory("concesionariaAutos.Persistencia");
     }
     
-    
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }

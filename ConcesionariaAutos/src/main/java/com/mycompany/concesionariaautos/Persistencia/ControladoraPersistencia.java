@@ -1,6 +1,7 @@
 package com.mycompany.concesionariaautos.Persistencia;
 
 import com.mycompany.concesionariaautos.Logica.Autos;
+import java.util.List;
 
 public class ControladoraPersistencia {
 
@@ -9,6 +10,11 @@ public class ControladoraPersistencia {
     public void GuardarAuto(Autos auto) {
         
         autojpa.create(auto);
+    }
+
+    public List<Autos> TraerAutos() {
+       
+        return autojpa.findAutosEntities();
     }
     
 }
