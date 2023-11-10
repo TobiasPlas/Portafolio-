@@ -29,5 +29,34 @@ public class Controladora {
         return controlpers.TraerAutos();
     
     }
+
+    public Autos TraerAuto(int num) {
+   
+       return controlpers.TraerAuto(num);
+    }
+
+   
+
+    public void EditarAuto(Autos auto,String modelo, String marca, String precio, String color, String patente, String cantPuert, String estado, String km) {
+        
+        
+        auto.setCantPuerta(cantPuert);
+        auto.setColor(color);
+        auto.setEstado(estado);
+        auto.setKm(km);
+        auto.setMarca(marca);
+        auto.setModelo(modelo);
+        auto.setPatente(patente);
+        auto.setPrecio(precio);
+        
+        controlpers.EditarAuto(auto);
+    }
+
+    public void EliminarAuto(int num) {
+ 
+    controlpers.EliminarAuto(num);
+    }
+
+    
     
 }
