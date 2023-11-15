@@ -18,7 +18,7 @@ public class Controladora {
          
             if (user.equalsIgnoreCase(e.getUsuario())) {
                 if (e.getContraseña().equalsIgnoreCase(pass)) {
-                    mensaje = "Se ingreso correctamente";
+                    mensaje = e.getTipo();
                     return mensaje;
                 } else {
                     mensaje = "Contraseña incorrecta";
@@ -27,11 +27,36 @@ public class Controladora {
             } else {
                 
                 mensaje = "Usuario incorrecto";
-                return mensaje;
+               
             }
      
         }return mensaje;
         
+    }
+
+    public List<Usuario> TraerUsuarios() {
+        
+        return controlper.TraerListaUsuarios();
+        
+    }
+
+
+    public Usuario TraerUsuario(int num_user) {
+       return controlper.TraerUsuario(num_user);
+    }
+
+    public void EditarUsuario(Usuario user, String usuario, String tipo) {
+  
+        user.setTipo(tipo);
+        user.setUsuario(usuario);
+        
+        controlper.EditarUsuario(user);
+        
+    }
+
+    public void EliminarUsuario(int num_user) {
+    
+        controlper.EliminarUser(num_user);
     }
 
 }

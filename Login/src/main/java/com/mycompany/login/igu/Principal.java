@@ -153,8 +153,26 @@ public class Principal extends javax.swing.JFrame {
         
           String mensaje = control.EnviarMensaje(user,pass);
          
+          if(mensaje.equalsIgnoreCase("Admin")){
+              
+              DatosAdm admin = new DatosAdm(user);
+              admin.setVisible(true);
+              admin.setLocationRelativeTo(null);
+              
+              
+          }else if(mensaje.equalsIgnoreCase("User")){
+              
+              DatosUser datosuser = new DatosUser(txtUsuario.getText());
+              datosuser.setVisible(true);
+              datosuser.setLocationRelativeTo(null);
+              
+              this.dispose();
+              
+          }else {
+              txtArea.setText(mensaje);
+          }
          
-          txtArea.setText(mensaje);
+          
         
     }//GEN-LAST:event_btnIngresarActionPerformed
 
